@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.algomesti.hrpayroll.entities.Worker;
 
+
 @Component
-@FeignClient(name = "hr-worker", url = "localhost:8101", path = "/workers")
+@FeignClient(name = "hr-worker", path = "/workers")
 public interface WorkFeignClient {
 
 	@GetMapping(value = "/{id}")
